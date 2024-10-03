@@ -1,0 +1,52 @@
+import org.gradle.nativeplatform.platform.internal.DefaultNativePlatform
+
+plugins {
+    id 'java'
+    id 'application'
+    id 'com.github.johnrengelman.shadow' version '7.0.0'
+  id 'org.jetbrains.kotlin.jvm'
+}
+
+group 'com.volodya'
+version '1.0-SNAPSHOT'
+mainClassName = project.properties['main'] ?: 'CSApplicationKt'
+
+repositories {
+    mavenCentral()
+//    maven {
+//        url "https://s01.oss.sonatype.org/content/repositories/staging/"
+//        metadataSources { artifact() }
+//    }
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+    implementation 'uk.co.electronstudio.jaylib:jaylib:5.0.+'
+  implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
+}
+
+application {
+    if(DefaultNativePlatform.currentOperatingSystem.isMacOsX()) {
+        applicationDefaultJvmArgs = ['-XstartOnFirstThread']
+    }
+}
+
+test {
+    useJUnitPlatform()
+}
+
+
+distributions {
+    main {
+        contents {
+            into('resources'){
+                from 'resources'
+            }
+        }
+    }
+}
+kotlin {
+  jvmToolchain(19)
+}
+
