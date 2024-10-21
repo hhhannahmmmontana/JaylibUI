@@ -1,24 +1,6 @@
-# Example Gradle project for Jaylib
-
-You can import this project into IntelliJ or Eclipse.
-
-## Use it to run the included examples in IntelliJ
-
-Right-click on the example and select `run`.
-
-## Use it to run the included examples from the command line
-
-    ./gradlew run -Pmain=examples.HeightMap
-    ./gradlew run -Pmain=examples.CubicMap
-
-## Use it as the basis of your own game.
-
-Edit `Main.java` with your own code.  (You can delete the examples.)  Then
-
-To run:
-
-    ./gradlew run
-
-To build a zip file you can distribute:
-
-    ./gradlew distZip
+# SIMPLE JAYLIB UI
+крч по физике моделирование задали а на котлине неудобно вот костя ([@k0ch3gar](https://github.com/k0ch3gar)) сказал
+есть такая штука рейлиб я такой вау поставил ее а там нифига нет ничего
+ну я начал делать коллизии по итогу либу написал пользуйтесь<br><br>
+код графа фигня знаю но мне было лень писать одновременно красиво и эффективно
+плюс у меня там еще дофига багов ищите целую обнимаю
