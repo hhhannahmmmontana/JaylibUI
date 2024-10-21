@@ -4,7 +4,7 @@ plugins {
     id 'java'
     id 'application'
     id 'com.github.johnrengelman.shadow' version '7.0.0'
-  id 'org.jetbrains.kotlin.jvm'
+    id 'org.jetbrains.kotlin.jvm'
 }
 
 group 'com.volodya'
@@ -23,7 +23,7 @@ dependencies {
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
     implementation 'uk.co.electronstudio.jaylib:jaylib:5.0.+'
-  implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
 }
 
 application {
@@ -47,6 +47,6 @@ distributions {
     }
 }
 kotlin {
-  jvmToolchain(19)
+    jvmToolchain(19)
 }
 
